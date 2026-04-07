@@ -59,7 +59,7 @@ stages:
       inputs:
         provider: 'azurerm'
         command: 'apply'
-        workingDirectory: $(tfWorkingDir)
-        commandOptions: 'tfplan --auto-approve'
-        environmentServiceNameAzureRM: $(ServiceConnection)
-        environmentAzureRmOverrideSubscriptionID: $(SubscriptionID)
+        workingDirectory: '$(tfWorkingDir)'
+        commandOptions: '--auto-approve'
+        environmentServiceNameAzureRM: '$(ServiceConnection)'
+        environmentAzureRmOverrideSubscriptionID: '$(SubscriptionID)'
