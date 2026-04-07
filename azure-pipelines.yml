@@ -29,13 +29,12 @@ stages:
       inputs:
         provider: 'azurerm'
         command: 'init'
-        workingDirectory: $(tfWorkingDir)
-        backendServiceArm: $(ServiceConnection)
-        backendAzureRmOverrideSubscriptionID: $(SubscriptionID)
-        backendAzureRmResourceGroupName: $(backendRG)
-        backendAzureRmStorageAccountName: $(backendST)
-        backendAzureRmContainerName: $(backendCON)
-        backendAzureRmKey: $(backendKEY)
+        workingDirectory: '89ce96dc-8535-4140-a60a-4ddca5655e3a'
+        backendServiceArm: 'MyServiceConnection01'
+        backendAzureRmOverrideSubscriptionID: '89ce96dc-8535-4140-a60a-4ddca5655e3a'
+        backendAzureRmStorageAccountName: 'myrgst5679807578jhj'
+        backendAzureRmContainerName: 'myrgccon'
+        backendAzureRmKey: 'dev.terraform.tfstate'
 
     - task: TerraformTask@5
       displayName: Terraform Validate
