@@ -17,6 +17,7 @@ stages:
     - task: AzureCLI@2
       inputs:
          azureSubscription: 'MyServiceConnection01'
+         scriptType: 'ps'
          scriptLocation: 'inlineScript'
          inlineScript: |
            terraform init \
