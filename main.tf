@@ -1,4 +1,4 @@
-resource "azurer_resource_group" "rg" {
+resource "azurerm_resource_group" "rg" {
     name = "man-rg"
-    location "westus"
+    location = "westus"
 }
