@@ -20,13 +20,7 @@ stages:
          scriptType: 'ps'
          scriptLocation: 'inlineScript'
          inlineScript: |
-           terraform init `
-           -reconfigure `
-                   -backend-config="storage_account_name=myrgst5679807578jhj" `
-                   -backend-config="container_name=myrgccon" `
-                   -backend-config="key=dev.terraform.tfstate" `
-                   -backend-config="resource_group_name=MyRGc" `
-                   -backend-config="use_azuread_auth=true"
+           terraform init -reconfigure -upgrade -backend-config="storage_account_name=myrgst5679807578jhj" -backend-config="container_name=myrgccon" -backend-config="key=dev.terraform.tfstate" -backend-config="resource_group_name=MyRGc" -backend-config="use_azuread_auth=true"
            
            terraform validate
            terraform fmt
